@@ -156,9 +156,9 @@ export function WorkspaceClient({
   }
 
   return (
-    <main className="aurora-page min-h-screen">
-      <div className="grid min-h-screen lg:grid-cols-[300px_1fr]">
-        <aside className="relative border-r border-white/10 bg-[#060a1d]/75 px-5 py-6 shadow-2xl backdrop-blur-2xl">
+    <main className="aurora-page h-screen overflow-hidden">
+      <div className="grid h-screen lg:grid-cols-[300px_1fr]">
+        <aside className="relative h-screen overflow-y-auto border-r border-white/10 bg-[#060a1d]/75 px-5 py-6 shadow-2xl backdrop-blur-2xl lg:sticky lg:top-0">
           <div className="pointer-events-none absolute inset-x-5 top-5 h-28 rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="relative mb-8 flex items-center gap-3">
             <div className="brand-mark flex size-12 items-center justify-center rounded-2xl text-slate-950">
@@ -221,8 +221,8 @@ export function WorkspaceClient({
           </div>
         </aside>
 
-        <section className="flex min-w-0 flex-col">
-          <header className="sticky top-0 z-10 border-b border-white/10 bg-[#070b1f]/72 px-6 py-5 backdrop-blur-2xl">
+        <section className="flex h-screen min-w-0 flex-col overflow-hidden">
+          <header className="z-10 shrink-0 border-b border-white/10 bg-[#070b1f]/72 px-6 py-5 backdrop-blur-2xl">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -251,8 +251,8 @@ export function WorkspaceClient({
             </div>
           </header>
 
-          <div className="grid gap-6 p-6 xl:grid-cols-[1fr_440px]">
-            <div className="flex min-w-0 flex-col gap-7">
+          <div className="grid min-h-0 flex-1 gap-6 overflow-hidden p-6 xl:grid-cols-[1fr_440px]">
+            <div className="flex min-h-0 min-w-0 flex-col gap-7 overflow-y-auto pr-1">
               <section id="tools" className="flex flex-col gap-4">
                 <SectionHeading
                   eyebrow="Tool Galaxy"
@@ -348,7 +348,7 @@ export function WorkspaceClient({
               </section>
             </div>
 
-            <aside className="xl:sticky xl:top-28 xl:self-start">
+            <aside className="min-h-0 overflow-y-auto">
               <Card className="glass-panel overflow-hidden rounded-3xl">
                 <CardHeader className="border-b border-white/10 bg-white/[0.035]">
                   <div className="mb-2 flex items-center justify-between">
