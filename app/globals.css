@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #070b1f;
+  --color-foreground: #f7fbff;
+  --color-card: rgba(15, 23, 42, 0.76);
+  --color-card-foreground: #f7fbff;
+  --color-popover: #101832;
+  --color-popover-foreground: #f7fbff;
+  --color-primary: #28f0d5;
+  --color-primary-foreground: #031414;
+  --color-secondary: rgba(255, 255, 255, 0.08);
+  --color-secondary-foreground: #eaf6ff;
+  --color-muted: rgba(255, 255, 255, 0.1);
+  --color-muted-foreground: #9daac7;
+  --color-accent: #ffcc66;
+  --color-accent-foreground: #221600;
+  --color-destructive: #ff6b8a;
+  --color-destructive-foreground: #fff7fb;
+  --color-border: rgba(180, 210, 255, 0.18);
+  --color-input: rgba(180, 210, 255, 0.22);
+  --color-ring: #28f0d5;
+  --radius-sm: 0.35rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.65rem;
+  --radius-xl: 0.9rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(40, 240, 213, 0.22), transparent 30vw),
+    radial-gradient(circle at 82% 16%, rgba(255, 87, 178, 0.18), transparent 32vw),
+    radial-gradient(circle at 55% 92%, rgba(255, 204, 102, 0.13), transparent 28vw),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    var(--color-background);
+  background-size: auto, auto, auto, 28px 28px;
+  color: var(--color-foreground);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(40, 240, 213, 0.28);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(40, 240, 213, 0.08), transparent 18%, rgba(255, 87, 178, 0.08) 48%, transparent 72%),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.09), transparent 38%);
+  mask-image: linear-gradient(to bottom, black, transparent 76%);
+}
+
+select,
+input,
+textarea {
+  color: var(--color-foreground);
+}
+
+select option {
+  background: #101832;
+  color: #f7fbff;
+}
+
+.aurora-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.aurora-page::before,
+.aurora-page::after {
+  position: fixed;
+  z-index: -1;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 999px;
+  content: "";
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.aurora-page::before {
+  top: -9rem;
+  right: 18%;
+  background: rgba(40, 240, 213, 0.45);
+}
+
+.aurora-page::after {
+  bottom: -12rem;
+  left: 10%;
+  background: rgba(255, 87, 178, 0.38);
+}
+
+.glass-panel {
+  border: 1px solid rgba(208, 232, 255, 0.18);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.045)),
+    rgba(9, 15, 35, 0.7);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(22px);
+}
+
+.neon-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(208, 232, 255, 0.16);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
+    rgba(12, 20, 44, 0.74);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.neon-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(120deg, rgba(40, 240, 213, 0.18), transparent 36%),
+    radial-gradient(circle at 92% 12%, rgba(255, 87, 178, 0.2), transparent 30%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.neon-card:hover::before,
+.neon-card[data-active="true"]::before {
+  opacity: 1;
+}
+
+.gradient-ring {
+  position: relative;
+}
+
+.gradient-ring::after {
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  content: "";
+  background: linear-gradient(135deg, #28f0d5, #ff57b2, #ffcc66);
+  opacity: 0.74;
+}
+
+.brand-mark {
+  background:
+    linear-gradient(135deg, rgba(40, 240, 213, 0.95), rgba(93, 140, 255, 0.85) 48%, rgba(255, 87, 178, 0.9));
+  box-shadow: 0 0 32px rgba(40, 240, 213, 0.34);
+}
+
+.neon-text {
+  background: linear-gradient(90deg, #ffffff, #73fff0 38%, #ffc8ed 72%, #ffdc8c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chrome-button {
+  background:
+    linear-gradient(90deg, rgba(40, 240, 213, 0.95), rgba(91, 141, 255, 0.92), rgba(255, 87, 178, 0.9));
+  box-shadow: 0 14px 34px rgba(40, 240, 213, 0.24);
+}
+
+.field-glow {
+  border-color: rgba(208, 232, 255, 0.22);
+  background: rgba(4, 9, 28, 0.58);
+}
+
+.status-dot {
+  box-shadow: 0 0 16px currentColor;
+}
