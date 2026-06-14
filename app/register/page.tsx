@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Bot, Rocket, Sparkles } from "lucide-react";
+import { Rocket, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -49,8 +49,8 @@ export default function RegisterPage() {
       <div className="grid w-full max-w-5xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <section className="hidden flex-col justify-center gap-5 lg:flex">
           <div className="flex items-center gap-3">
-            <div className="brand-mark flex size-12 items-center justify-center rounded-2xl text-slate-950">
-              <Bot />
+            <div className="brand-mark flex size-12 items-center justify-center rounded-2xl">
+              <img src="/brand-icon.png" alt="" className="size-full rounded-2xl object-cover" />
             </div>
             <div>
               <p className="text-2xl font-black">聚合AI工坊</p>

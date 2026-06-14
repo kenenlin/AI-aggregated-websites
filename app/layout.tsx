@@ -4,7 +4,12 @@ import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
   title: "聚合AI工坊",
-  description: "自带 API Key 的多模型 AI 工具箱聚合平台"
+  description: "自带 API Key 的多模型 AI 工具箱聚合平台",
+  icons: {
+    icon: "/brand-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/brand-icon.png"
+  }
 };
 
 export default function RootLayout({

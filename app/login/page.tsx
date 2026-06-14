@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Bot, Fingerprint, KeyRound, Layers3, ShieldCheck, Sparkles } from "lucide-react";
+import { Fingerprint, KeyRound, Layers3, ShieldCheck, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -50,8 +50,8 @@ export default function LoginPage() {
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl gap-8 lg:grid-cols-[1.08fr_0.92fr]">
         <section className="flex flex-col justify-center gap-8">
           <div className="flex items-center gap-3">
-            <div className="brand-mark flex size-13 items-center justify-center rounded-2xl text-slate-950">
-              <Bot />
+            <div className="brand-mark flex size-13 items-center justify-center rounded-2xl">
+              <img src="/brand-icon.png" alt="" className="size-full rounded-2xl object-cover" />
             </div>
             <div>
               <p className="text-2xl font-black tracking-normal">聚合AI工坊</p>

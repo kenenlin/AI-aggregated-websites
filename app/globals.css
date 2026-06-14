@@ -188,9 +188,8 @@ select option {
 }
 
 .brand-mark {
-  background:
-    linear-gradient(135deg, rgba(40, 240, 213, 0.95), rgba(93, 140, 255, 0.85) 48%, rgba(255, 87, 178, 0.9));
-  box-shadow: 0 0 32px rgba(40, 240, 213, 0.34);
+  overflow: hidden;
+  box-shadow: 0 0 32px rgba(40, 240, 213, 0.26);
 }
 
 .neon-text {

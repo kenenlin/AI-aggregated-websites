@@ -5,7 +5,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { signOut } from "next-auth/react";
 import { useMemo, useState } from "react";
 import {
-  Bot,
   CheckCircle2,
   Code2,
   FileText,
@@ -161,8 +160,8 @@ export function WorkspaceClient({
         <aside className="relative h-screen overflow-y-auto border-r border-white/10 bg-[#060a1d]/75 px-5 py-6 shadow-2xl backdrop-blur-2xl lg:sticky lg:top-0">
           <div className="pointer-events-none absolute inset-x-5 top-5 h-28 rounded-full bg-cyan-400/10 blur-3xl" />
           <div className="relative mb-8 flex items-center gap-3">
-            <div className="brand-mark flex size-12 items-center justify-center rounded-2xl text-slate-950">
-              <Bot />
+            <div className="brand-mark flex size-12 items-center justify-center rounded-2xl">
+              <img src="/brand-icon.png" alt="" className="size-full rounded-2xl object-cover" />
             </div>
             <div>
               <p className="text-lg font-black tracking-normal">聚合AI工坊</p>
